@@ -4,7 +4,7 @@ import (
 	"context"
 	"time"
 
-	v1beta12 "k8s.io/api/policy/v1beta1"
+	policyv1 "k8s.io/api/policy/v1"
 
 	v13 "github.com/openshift/api/route/v1"
 	v14 "k8s.io/api/networking/v1"
@@ -65,7 +65,7 @@ type ClusterState struct {
 	KeycloakRoute                   *v13.Route
 	KeycloakMetricsRoute            *v13.Route
 	PostgresqlServiceEndpoints      *v1.Endpoints
-	PodDisruptionBudget             *v1beta12.PodDisruptionBudget
+	PodDisruptionBudget             *policyv1.PodDisruptionBudget
 	KeycloakProbes                  *v1.ConfigMap
 	KeycloakBackup                  *v1alpha1.KeycloakBackup
 }

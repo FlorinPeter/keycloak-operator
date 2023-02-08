@@ -1,4 +1,4 @@
-FROM registry.ci.openshift.org/openshift/release:golang-1.13 AS build-env
+FROM golang:1.19 AS build-env
 
 COPY . /src/
 
